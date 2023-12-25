@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
      * The disk on which to store added files and derived images by default. Choose
      * one or more of the disks you've configured in config/filesystems.php.
@@ -71,7 +70,7 @@ return [
     /*
      * The class that contains the strategy for determining a media file's path.
      */
-    'path_generator' => Spatie\MediaLibrary\Support\PathGenerator\DefaultPathGenerator::class,
+    'path_generator' => App\Services\MediaLibrary\UuidPathGenerator::class,
 
     /*
      * The class that contains the strategy for determining how to remove files.
@@ -136,7 +135,7 @@ return [
             '-m 6', // for the slowest compression method in order to get the best compression.
             '-pass 10', // for maximizing the amount of analysis pass.
             '-mt', // multithreading for some speed improvements.
-            '-q 90', //quality factor that brings the least noticeable changes.
+            '-q 90', // quality factor that brings the least noticeable changes.
         ],
         Spatie\ImageOptimizer\Optimizers\Avifenc::class => [
             '-a cq-level=23', // constant quality level, lower values mean better quality and greater file size (0-63).
