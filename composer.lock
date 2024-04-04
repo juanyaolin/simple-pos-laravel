@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcf2e5f019c5943b80cb40216b501f92",
+    "content-hash": "f6243fa7e9c85825b26d5945b2457097",
     "packages": [
         {
             "name": "brick/math",
@@ -1044,6 +1044,66 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "juanyaolin/laravel-api-response-builder",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/juanyaolin/laravel-api-response-builder.git",
+                "reference": "a20c0d50fba9f90a3a9998aa94cc683bdff5c3ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/juanyaolin/laravel-api-response-builder/zipball/a20c0d50fba9f90a3a9998aa94cc683bdff5c3ee",
+                "reference": "a20c0d50fba9f90a3a9998aa94cc683bdff5c3ee",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^10.0|^11.0",
+                "php": "^8.1|^8.2|^8.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Juanyaolin\\ApiResponseBuilder\\ApiResponseBuilderServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Juanyaolin\\ApiResponseBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "juanyaolin",
+                    "email": "maple96541@gmail.com"
+                }
+            ],
+            "description": "A laravel package for easily build json api response.",
+            "homepage": "https://github.com/juanyaolin/laravel-api-response-builder",
+            "keywords": [
+                "api",
+                "builder",
+                "error",
+                "exception",
+                "json",
+                "laravel",
+                "laravel 10",
+                "laravel 11",
+                "response"
+            ],
+            "support": {
+                "issues": "https://github.com/juanyaolin/laravel-api-response-builder/issues",
+                "source": "https://github.com/juanyaolin/laravel-api-response-builder/"
+            },
+            "time": "2024-04-04T16:28:01+00:00"
         },
         {
             "name": "laravel/framework",
