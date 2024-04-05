@@ -1,8 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+foreach (['admin', 'member', 'guest', 'global'] as $prefix) {
+    $path = implode(DIRECTORY_SEPARATOR, [__DIR__, 'api', $prefix, '*.php']);
+
+    foreach (glob($path) as $file) {
+        Route::prefix($prefix)->group($file);
+    }
+}
