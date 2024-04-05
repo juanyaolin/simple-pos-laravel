@@ -2,14 +2,23 @@
 
 namespace App\Models;
 
+use App\Traits\UsingTableNameAsMorphClass;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+use Spatie\MediaLibrary\MediaCollections\Models\Concerns\HasUuid;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasApiTokens;
+    use HasFactory;
+    use HasUuid;
+    use Notifiable;
+    use SoftDeletes;
+    use UsingTableNameAsMorphClass;
 
     /**
      * The attributes that are mass assignable.
